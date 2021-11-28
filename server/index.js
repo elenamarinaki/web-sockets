@@ -22,3 +22,8 @@ const messageHandler = (msg) => {
     }
   });
 };
+
+// what should a websocket do on connection?
+wsServer.on('connection', (ws) => {
+  ws.on('message', messageHandler);
+});
