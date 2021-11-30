@@ -19,7 +19,7 @@ const wsServer = new WebSocket.Server({
 
 // ------------------------ upgrading from HTTP to websocket
 const upgrade = (request, socket, head) => {
-  // is connection going to be accepted?
+  // is the connection going to be accepted?
   if (Math.random() > 0.5) {
     return socket.end('HTTP/1.1 401 Unauthorized\r\n', 'ascii');
   }
